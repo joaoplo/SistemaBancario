@@ -1,9 +1,15 @@
 package org.example.spy;
+
+import org.example.mock.AutorizacaoPagamentoService;
+
 public class TransacaoService {
     private BancoDeDados bancoDeDados;
 
     public TransacaoService(BancoDeDados bancoDeDados) {
         this.bancoDeDados = bancoDeDados;
+    }
+
+    public TransacaoService(AutorizacaoPagamentoService pagamentoService) {
     }
 
     public void realizarDeposito(Conta conta, double valor) {
